@@ -1,0 +1,41 @@
+
+h1 {
+  border-radius:20px;
+  box-shadow: 0px 5px 10px 0px rgba(7, 68, 134, 0.75);
+}
+
+.ZONA_50{
+  color:rgb(3, 1, 26);
+  background-color: rgb(228, 72, 72);;
+  background-color: solid;
+}
+
+
+.ZONA_30{
+  color:rgb(3, 1, 26);
+  background-color: rgb(17, 197, 113);;
+  background-color: solid;
+}
+
+.ZONA_20{
+  color:rgb(3, 1, 26);
+}
+
+.ZONA_10{
+  color:rgb(3, 1, 26);
+  background-color: rgb(52, 116, 177);;
+  background-color: solid;
+}
+
+.ALEXANDER, .FULL-PRECIO, .FV, .LINEA, .SC_2018,.SC_2019,.SC_2020,.SC_2021{
+  color:rgb(3, 1, 26);
+  background-color: rgb(161, 161, 161);;
+  background-color: solid;
+}
+
+
+.MEGA_CARPA,.MEGA_CARPA_1,.CALZADO_111900,.CALZADO_49900,.CALZADO_69900,.CALZADO_79900,.CALZADO_89900,.CALZADO_99900{
+  color:rgb(54, 0, 0);
+  background-color: rgb(219, 75, 75);;
+  background-color: solid;
+}

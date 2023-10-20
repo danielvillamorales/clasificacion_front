@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <h2 class="text-secondary text-center">Clasificación De Prendas</h2>
+  <hr>
+  <input #valor type="text" class="form-control" placeholder="Codigo De Barras o Producto"
+   (keyup)="onKeyPress($event, valor.value)">
+  <div class="container-fluid" *ngFor="let c of clasificacion">
+    <h1 class="text-center mt-2 {{replaceCaracheres(c.clasificacion)}}">{{c.clasificacion}}</h1>
+    <hr>
+    <div class="container-fluid">
+      <h6 class="text-center bg-primary text-light m-1 p-1">{{c.producto}} Coleccion: {{c.coleccion}}</h6>
+      <button class="btn btn-sm btn-light m-2">GRUPO: {{c.grupo}} {{c.descgrupo}}</button>
+      <button class="btn btn-sm btn-light m-2">SUBGRUPO: {{c.subgrupo}} {{c.descsubgrupo}}</button>
+      <button class="btn btn-sm btn-light m-2">COMPOSICION: {{c.composicion}}</button>
+      <button class="btn btn-sm btn-light m-2">DISEÑO: {{c.diseno}}</button>
+      <h6 class="text-primary bg-light text-center">PRECIO: {{c.tiquete | number}}</h6>
+    </div>
+  </div>
+  <div *ngIf="clasificacion.length == 0 ">
+    <h3 class="bg-info text-white text-center mt-5">No se encontraron resultados</h3>
+  </div>
+</div>
