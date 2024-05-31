@@ -5,6 +5,7 @@
    (keyup)="onKeyPress($event, valor.value)">
   <div class="container-fluid" *ngFor="let c of clasificacion">
     <h1 class="text-center mt-2 {{replaceCaracheres(c.clasificacion)}}">{{c.clasificacion}}</h1>
+    <h1 class="text-center mt-2" *ngIf="c.clasificacion == null">Sin Clasificar</h1>
     <hr>
     <div class="container-fluid">
       <h6 class="text-center bg-primary text-light m-1 p-1">{{c.producto}} Coleccion: {{c.coleccion}}</h6>

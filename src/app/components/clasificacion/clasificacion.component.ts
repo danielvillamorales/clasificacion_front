@@ -61,7 +61,10 @@ export class ClasificacionComponent implements OnInit{
      // Volver a suscribirse al debouncer
   }
 
-  replaceCaracheres(valor:string):string{
+  replaceCaracheres(valor:string | null):string{
+    if (!valor) {
+      return 'Sin Clasificar';
+    }
     return valor.replace(/ /g, "_").replace(/%/g, "");
   }
 }

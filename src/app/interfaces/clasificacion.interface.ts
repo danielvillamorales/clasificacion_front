@@ -10,8 +10,8 @@ export interface Clasificacion {
   coleccion:     string;
   subgrupo:      string;
   descsubgrupo:  string;
-  diseno:        string;
+  diseno:        string | null;
   concepto:      string;
   composicion:   string;
-  clasificacion: string;
+  clasificacion: string | null;
 }
