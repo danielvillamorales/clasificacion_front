@@ -44,6 +44,9 @@ export class DotacionkaComponent {
       response => {
         console.log(response);
         this.dotaciones_entregadas = response;
+        if (this.dotaciones_entregadas.length > 0) {
+          alert('Dotaciones guardadas correctamente');
+        }
       },
     );
     const input = document.getElementById('archivo') as HTMLInputElement;
