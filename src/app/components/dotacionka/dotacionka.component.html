@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <h3>Importación Dotación</h3>
+  <hr>
+  <p>Se debe subir un archivo de tipo txt separado por , con la siguiente estructura:</p>
+  <p class="text-danger">codigo empleado, codigo dotacion, cantidad, valor unitario, fecha (yyyy-mm-dd)</p>
+  <hr>
+  <div class="input-group mb-3">
+    <input class="form-control" type="file" id="archivo" name="archivo" accept=".txt" (change)="onFileSelected($event)">
+    <button class="btn btn-outline-dark" (click)="onUpload()">Subir</button>
+  </div>
+  <div *ngIf="dotaciones_entregadas.length > 0">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id Empleado</th>
+          <th>Id Dotación</th>
+          <th>Cantidad</th>
+          <th>Valor Unitario</th>
+          <th>Fecha</th>
+          <th>Fecha Creación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dotacion of dotaciones_entregadas">
+          <td>{{dotacion.empleado}}</td>
+          <td>{{dotacion.dotacion}}</td>
+          <td>{{dotacion.cantidad}}</td>
+          <td>{{dotacion.valorunitario}}</td>
+          <td>{{dotacion.fecha | date:'dd-MM-yyyy'  }}</td>
+          <td>{{dotacion.fechahoradecreacion | date:'medium'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
