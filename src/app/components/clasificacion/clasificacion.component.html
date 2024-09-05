@@ -2,7 +2,7 @@
   <h2 class="text-secondary text-center">Clasificación De Prendas</h2>
   <hr>
   <input #valor type="text" class="form-control" placeholder="Codigo De Barras o Producto"
-   (keyup)="onKeyPress($event, valor.value)">
+    (keyup)="onKeyPress($event, valor.value)">
   <div class="container-fluid" *ngFor="let c of clasificacion">
     <h1 class="text-center mt-2 {{replaceCaracheres(c.clasificacion)}}">{{c.clasificacion}}</h1>
     <h1 class="text-center mt-2" *ngIf="c.clasificacion == null">Sin Clasificar</h1>
@@ -15,6 +15,9 @@
       <button class="btn btn-sm btn-light m-2">DISEÑO: {{c.diseno}}</button>
       <h6 class="text-primary bg-light text-center">PRECIO: {{c.tiquete | number}}</h6>
     </div>
+  </div>
+  <div *ngIf="this.ruta_imagen != ''" class="image-container">
+    <img class="card-img-top" src="{{ruta_imagen}}">
   </div>
   <div *ngIf="clasificacion.length == 0 ">
     <h3 class="bg-info text-white text-center mt-5">No se encontraron resultados</h3>

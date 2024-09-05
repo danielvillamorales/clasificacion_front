@@ -2,6 +2,9 @@
 
 export interface Clasificacion {
   id:            number;
+  referencia:    string;
+  consecutivo:   number;
+  codcolor:      string | null;
   producto:      string;
   tiquete:       number;
   codbar:        string;
